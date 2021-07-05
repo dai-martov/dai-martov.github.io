@@ -252,7 +252,7 @@ function showTextOverlay(text) {
 function showPlayOverlay() {
 	var img = document.createElement('img');
 	img.id = 'playButton';
-	img.src = 'https://github.com/martovcompany/signal-server-pub/blob/main/images/Play.png?raw=true';
+	img.src = 'https://dai-martov.github.io/images/Play.png';
 	img.alt = 'Start Streaming';
 	setOverlay('clickableState', img, event => {
 		if (webRtcPlayerObj)
