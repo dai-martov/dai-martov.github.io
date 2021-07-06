@@ -1,22 +1,8 @@
 import { ethers } from "https://dai-martov.github.io/scripts/ethers-5.2.esm.min.js";
-const https = require('https');
 
 async function getApe() {
-    let data = ''
-    let json_data = ''
-
-    let req = await https.get("https://dai-martov.github.io/public/Ape.json", function(res) {
-        res.on('data', function(stream) {
-            data += stream;
-        });
-        res.on('end', function() {
-            json_data = JSON.parse(data);
-        });
-    });
-    req.on('error', function(e) {
-        console.log(e.message);
-    });
-    return json_data
+    let json_data = await fetch('https://dai-martov.github.io/public/Ape.json')
+    return json_data.json()
 }
 
 Ape = getApe()
