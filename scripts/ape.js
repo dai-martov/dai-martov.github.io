@@ -1,4 +1,4 @@
-import { ethers } from "https://cdn.ethers.io/lib/ethers-5.2.esm.min.js";
+import { ethers } from "https://dai-martov.github.io/scripts/ethers-5.2.esm.min.js";
 const https = require('https');
 
 async function getApe() {
