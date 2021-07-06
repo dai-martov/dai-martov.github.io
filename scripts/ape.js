@@ -5,8 +5,8 @@ async function getApe() {
     return json_data.json()
 }
 
-let Ape = getApe()
-console.log(Ape)
+let ape = getApe()
+console.log(ape)
 
 // let rawApe = fs.readFileSync('Ape.json');
 // let rawDb = fs.readFileSync('db2.json');
