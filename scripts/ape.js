@@ -12,7 +12,7 @@ async function getRes() {
 }
 
 getRes().then(([ape, db]) => {
-    console.log("Out")
+    console.log("Out", ape)
 }).catch(error => {console.log(error)})
 
 
