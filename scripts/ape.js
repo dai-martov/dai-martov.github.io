@@ -12,11 +12,9 @@ async function getRes() {
 }
 
 getRes().then(([ape, db]) => {
-    ape;
-    db;
+    console.log("Out", ape)
 }).catch(error => {console.log(error)})
 
-console.log("Out", ape)
 
 // let rawApe = fs.readFileSync('Ape.json');
 // let rawDb = fs.readFileSync('db2.json');
