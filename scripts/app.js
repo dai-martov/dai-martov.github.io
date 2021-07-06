@@ -1550,7 +1550,6 @@ function connect() {
 		return;
 	}
 
-	console.log("from me", window.location.href)
 	ws = new WebSocket(window.location.href.replace('http://', 'ws://').replace('https://', 'wss://').replace('/game1', ':82').replace('/game2', ':83'));
 
 	ws.onmessage = function (event) {
