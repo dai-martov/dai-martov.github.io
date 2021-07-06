@@ -1,14 +1,22 @@
 import { ethers } from "https://dai-martov.github.io/scripts/ethers-5.2.esm.min.js";
 
-async function getApe() {
+async function getRes() {
     let json_data = await fetch('https://dai-martov.github.io/public/Ape.json')
-    let data = await json_data.json()
-    console.log("In", data)
-    return data
+    const [apeRes, dbRes] = await Promise.all([
+        fetch('https://dai-martov.github.io/public/Ape.json'),
+        fetch('https://dai-martov.github.io/public/db2.json')
+      ]);
+    let ape = await apeRes.json()
+    let db = await dbRes.json()
+    return [ape, db]
 }
 
-let ape = getApe()
-console.log(ape)
+getRes().then(([ape, db]) => {
+    ape;
+    db;
+}).catch(error => {console.log(error)})
+
+console.log("Out", ape)
 
 // let rawApe = fs.readFileSync('Ape.json');
 // let rawDb = fs.readFileSync('db2.json');
