@@ -48,6 +48,7 @@ async function getRes() {
     let db = await dbRes.json()
     
     getBalance(ape)
+    getNFTs(ape, db)
     
     //return [ape, db]
 }
