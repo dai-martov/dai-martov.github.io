@@ -3,6 +3,7 @@ import { ethers } from "https://dai-martov.github.io/scripts/ethers-5.2.esm.min.
 async function getApe() {
     let json_data = await fetch('https://dai-martov.github.io/public/Ape.json')
     let data = await json_data.json()
+    console.log("In", data)
     return data
 }
 
